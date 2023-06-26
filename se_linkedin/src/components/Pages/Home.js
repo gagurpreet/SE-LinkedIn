@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PostList from './Post_list';
+import PostList from '../Post_list';
 import PostLoggedUser from './Posts_LoggedUser';
 
 

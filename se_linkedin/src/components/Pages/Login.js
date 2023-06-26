@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function setLoggedInUser() {
+function SetLoggedInUser({PostList}) {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [errorMessage, setErrorMessage ] = useState('')
@@ -22,8 +22,8 @@ function setLoggedInUser() {
 				if(res.error){
 					setErrorMessage(res.error)
 				}else {
-					setLoggedInUser(res)
-					renderPostList()
+					SetLoggedInUser(res)
+					PostList()
 				}
 			})
 	}
@@ -51,4 +51,4 @@ function setLoggedInUser() {
 	);
 }
 
-export default setLoggedInUser;
+export default SetLoggedInUser;

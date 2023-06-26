@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddPost() {
+function AddPost({ posts, setPosts, PostList}) {
 	const [name, setName ] = useState('')
 	const [message, setMessage ] = useState('')
 	const [skills, setSkills] = useState('')
@@ -22,7 +22,7 @@ function AddPost() {
 			.then(res => res.json())
 			.then(post => {
 				setPosts(posts => [...posts, post])
-				renderPostList()
+				PostList()
 			})
 	}
 
