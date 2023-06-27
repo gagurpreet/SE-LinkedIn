@@ -13,9 +13,10 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
-	{ name: "Home", path: "/home" },
+	{ name: "Home", path: "/Home" },
 	{ name: "AddPost", path: "/add_post" },
 	{ name: "PostLoggedUser", path: "/post_logged_user" },
+	{ name: "Search", path: "/search_component" },
 	{ name: "SignUp", path: "/sign_up" },
 	{ name: "Login", path: "/log_in" },
 ];

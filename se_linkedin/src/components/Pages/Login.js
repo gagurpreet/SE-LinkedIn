@@ -12,7 +12,7 @@ function SetLoggedInUser({PostList}) {
 			password
 		}
 
-		fetch('/api/sessions', {
+		fetch('/sessions', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json'},
 			body: JSON.stringify(data)

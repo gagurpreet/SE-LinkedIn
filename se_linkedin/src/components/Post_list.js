@@ -17,6 +17,7 @@ function PostList({ posts, deletePost }) {
 
 	return(
 		<section className='post-list'>
+			<PostList posts={posts} deletePost={deletePost} />
 			{renderPosts()}
 		</section>
 	);

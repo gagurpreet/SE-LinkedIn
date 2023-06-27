@@ -9,24 +9,24 @@ function Home() {
 
 
 	useEffect(() => {
-		fetch('/api/posts')
+		fetch('/posts')
 			.then(res => res.json())
 			.then(posts => {
 				setPosts(posts)
 			})
 
-		fetch('/api/sessions')
+		fetch('/sessions')
 			.then(res => res.json())
 			.then(data => {
 				if(data.result === 'successful') {
-					setLoggedInUser(data.email)
+					setLoggedInUser(data.name)
 				}
 			})
 	}, [])
 
 	return (
 		<div>
-			<h1>Welcome to Software Enggineering LinkedIn</h1>
+			<h1>Welcome to Software Engineering LinkedIn App</h1>
 			<PostLoggedUser posts={posts} loggedInuser={loggedInUser}/>
 			<PostList posts={posts} loggedInUser={loggedInUser} />
 		</div>

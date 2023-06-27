@@ -13,14 +13,15 @@ function SignUp({setLoggedInUser, PostList}) {
 			password
 		}
 
-		fetch('http://localhost:3001/api/users', {
+		
+		fetch('/users', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json'},
 			body: JSON.stringify(data)
 		})
 			.then(res => res.json())
 			.then(user => {
-				setLoggedInUser(user)
+				setLoggedInUser(user.name)
 				PostList()
 			})
 			.catch(error =>{
