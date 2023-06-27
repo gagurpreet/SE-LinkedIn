@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-function SignUp({ setLoggedInUser, PostList}) {
+function SignUp({setLoggedInUser, PostList}) {
 	const [name, setName] = useState('')
 	const [email, setEmail]= useState('')
 	const [password, setPassword] = useState('')
 
-	const signup = (event) => {
+	const signUp = (event) => {
 		event.preventDefault()
 		const data = {
 			name,
@@ -13,21 +13,24 @@ function SignUp({ setLoggedInUser, PostList}) {
 			password
 		}
 
-		fetch('/api/users', {
+		fetch('http://localhost:3001/api/users', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json'},
 			body: JSON.stringify(data)
 		})
 			.then(res => res.json())
-			.then(email => {
-				setLoggedInUser(email)
+			.then(user => {
+				setLoggedInUser(user)
 				PostList()
+			})
+			.catch(error =>{
+				console.error('Error:', error)
 			})
 	}
 
 	return(
 		<section className='sign-up'>
-			<form onSubmit={signup}>
+			<form onSubmit={signUp}>
 				<h2>Sign Up:</h2>
 				<fieldset>
 					<label htmlFor="name">Name:</label>
