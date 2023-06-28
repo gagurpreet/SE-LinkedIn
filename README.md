@@ -20,3 +20,22 @@ Sign-up page:
 
 Home page:
 ![image](https://github.com/gagurpreet/quiz_app/assets/129696535/d0501616-2bde-4516-96e5-bd175e4df543)
+
+## :pencil2: Planning & Problem Solving
+Our team took on the task of developing a user-friendly quiz application using Node Express. Below, you can see the key steps we followed in the planning and problem-solving process to ensure the success of our project.
+- Brainstormed ideas as a group to create an appealing and interesting quiz web application.
+- Identified the Minimum Viable Product (MVP) criteria and established additional features for future development.
+- Utilised the Trello app to track and manage the progress of individual tasks, including crafting thoughtful user stories together as a team (as seen in the to-do column of Trello in the image below).
+- Assigned tasks to team members based on their individual expertise and skills.
+- Conducted regular testing to ensure the proper functioning of the application after making changes.
+- Collaboratively resolved coding errors by utilising Zoom screensharing for quick and efficient problem-solving.
+- Celebrated smaller milestones throughout the project to motivate and encourage team members.
+- Leveraged the unique strengths and expertise of each team member to optimise productivity and efficiency.
+
+![Planning](client/images/Screenshot%202023-06-05%20at%202.35.46%20pm.png)
+![Wireframing](client/images/Screenshot%202023-06-05%20at%2012.24.49%20pm.png)
+
+## :rocket: Cool tech
+- **Programming Languages**: The project utilises CSS, JavaScript, and HTML to create an interactive web application. These languages allow for dynamic content and provide a solid foundation for building engaging user interfaces.
+- **CSS Animations**: To enhance the user experience, CSS animations have been implemented. These animations add visual appeal and make the application more interactive and engaging.
+- **Background Music**: A background music feature has been incorporated into the web application. It adds ambiance and immerses users in the quiz-taking experience, creating a more enjoyable atmosphere.
