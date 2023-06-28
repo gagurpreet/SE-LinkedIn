@@ -16,10 +16,12 @@ function PostList({ posts, deletePost }) {
 	}
 
 	return(
-		<section className='post-list'>
-			<PostList posts={posts} deletePost={deletePost} />
-			{renderPosts()}
-		</section>
+		<div style={{ textAlign: 'center' }}>
+			<section className='post-list'>
+				<PostList posts={posts} deletePost={deletePost} />
+				{renderPosts()}
+			</section>
+		</div>
 	);
 }
 

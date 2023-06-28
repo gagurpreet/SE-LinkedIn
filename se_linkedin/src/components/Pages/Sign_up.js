@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DefaultLayout from '../layout/DefaultLayout';
 
 function SignUp({setLoggedInUser, PostList}) {
 	const [name, setName] = useState('')
@@ -30,30 +31,34 @@ function SignUp({setLoggedInUser, PostList}) {
 	}
 
 	return(
-		<section className='sign-up'>
-			<form onSubmit={signUp}>
-				<h2>Sign Up:</h2>
-				<fieldset>
-					<label htmlFor="name">Name:</label>
-					<input type="text" id='name'
-					value={name}
-					onChange={event => setName(event.target.value)} />
-				</fieldset>
-				<fieldset>
-						<label htmlFor="email">Email:</label>
-						<input type="text" id='email' 
-						value={email} 
-						onChange={event => setEmail(event.target.value)} />
-				</fieldset>
-				<fieldset>
-						<label htmlFor="password">Password:</label>
-						<input type="password" id='password' 
-						value={password} 
-						onChange={event => setPassword(event.target.value)} />
-				</fieldset>
-				<button type='submit'>Sign Up</button>
-			</form>
-		</section>
+		<DefaultLayout>
+			<div style={{ textAlign: 'center' }} >
+				<section className='sign-up'>
+					<form onSubmit={signUp}>
+						<h2 style={{ textDecoration: 'Highlight', fontFamily:"Bold", color:'blue'}}>Sign Up:</h2>
+						<fieldset>
+							<label htmlFor="name">Name:</label>
+							<input type="text" id='name'
+							value={name}
+							onChange={event => setName(event.target.value)} />
+						</fieldset>
+						<fieldset>
+								<label htmlFor="email">Email:</label>
+								<input type="text" id='email' 
+								value={email} 
+								onChange={event => setEmail(event.target.value)} />
+						</fieldset>
+						<fieldset>
+								<label htmlFor="password">Password:</label>
+								<input type="password" id='password' 
+								value={password} 
+								onChange={event => setPassword(event.target.value)} />
+						</fieldset>
+						<button type='submit'>Sign Up</button>
+					</form>
+				</section>
+			</div>
+		</DefaultLayout>	
 	);
 }
 

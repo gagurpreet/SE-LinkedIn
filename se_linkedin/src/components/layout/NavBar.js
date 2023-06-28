@@ -15,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 const pages = [
 	{ name: "Home", path: "/Home" },
 	{ name: "AddPost", path: "/add_post" },
-	{ name: "PostLoggedUser", path: "/post_logged_user" },
+	{ name: "Posts", path: "/post_logged_user" },
 	{ name: "Search", path: "/search_component" },
 	{ name: "SignUp", path: "/sign_up" },
 	{ name: "Login", path: "/log_in" },
@@ -46,7 +46,7 @@ const Navbar = () => {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<AppBar position='static'>
+			<AppBar position='static' sx={{ backgroundColor: 'violet'}}>
 				<Container maxWidth='xl'>
 					<Toolbar disableGutters>
 						<Typography
@@ -59,12 +59,12 @@ const Navbar = () => {
 								display: { xs: "flex", lg: "flex" },
 								fontFamily: "monospace",
 								fontWeight: 700,
-								letterSpacing: ".3rem",
-								color: "inherit",
+								letterSpacing: ".0.5rem",
+								color: "green",
 								textDecoration: "none",
 							}}
 						>
-							Gurpreet
+					Gurpreet Kaur
 						</Typography>
 
 						<Box
@@ -78,7 +78,7 @@ const Navbar = () => {
 								<Button
 									key={page.name}
 									onClick={handleCloseNavMenu}
-									sx={{ my: 2, color: "white", display: "block" }}
+									sx={{ my: 2, color: "blue", display: "block" }}
 									component={Link}
 									to={page.path}
 								>
@@ -94,7 +94,7 @@ const Navbar = () => {
 								aria-controls='menu-appbar'
 								aria-haspopup='true'
 								onClick={handleOpenNavMenu}
-								color='inherit'
+								color='purple'
 							>
 								<MenuIcon />
 							</IconButton>
@@ -126,6 +126,7 @@ const Navbar = () => {
 										<Typography textAlign='center'>{page.name}</Typography>
 									</MenuItem>
 								))}
+								
 							</Menu>
 						</Box>
 					</Toolbar>
